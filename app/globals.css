@@ -1,0 +1,178 @@
+:root {
+  color-scheme: dark;
+  --bg: #090d14;
+  --panel: #121927;
+  --panel-soft: #182235;
+  --text: #edf2ff;
+  --muted: #a3b1cb;
+  --accent: #4f8cff;
+  --danger: #f4606c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+  background: radial-gradient(circle at top right, #1b2f55, var(--bg) 40%);
+  color: var(--text);
+}
+
+.page-wrap,
+.admin-page,
+.auth-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero,
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.eyebrow {
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+.subtitle,
+small,
+.empty-state {
+  color: var(--muted);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1rem;
+}
+
+.map-panel,
+.sidebar,
+.auth-card,
+.moderation-section,
+.modal-card,
+.pending-card {
+  background: linear-gradient(180deg, var(--panel), var(--panel-soft));
+  border: 1px solid #29416f;
+  border-radius: 18px;
+}
+
+.map-placeholder {
+  height: 460px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+
+.sidebar,
+.moderation-section,
+.auth-card,
+.pending-card,
+.modal-card {
+  padding: 1rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.place-card,
+.pending-card {
+  margin-top: 0.8rem;
+}
+
+.btn-primary,
+.btn-ghost,
+.btn-danger {
+  border: 0;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #425d8f;
+  color: var(--text);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: white;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(1, 6, 15, 0.78);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.modal-card {
+  width: min(560px, 100%);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-grid,
+.auth-card {
+  display: grid;
+  gap: 0.7rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+}
+
+input {
+  border: 1px solid #3f5b90;
+  background: #0d1422;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+}
+
+.status-ok {
+  color: #65d08f;
+  margin-top: 0.8rem;
+}
+
+.status-error {
+  color: #ff8792;
+  margin-top: 0.8rem;
+}
+
+.action-row {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
